@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.2;
+            line-height: 1.6;
             background-color: #FFFFE4;
             color: #333;
         }
@@ -69,7 +69,7 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 20px;
         }
         
         .nav-links a {
@@ -108,6 +108,10 @@
         .hero-content h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero-content h1 span {
             color: #800000;
         }
         
@@ -276,6 +280,106 @@
             margin-bottom: 10px;
         }
         
+        /* Contact Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #FFFFE4;
+            margin: auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalopen 0.4s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-60px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            color: #800000;
+            cursor: pointer;
+        }
+        
+        .contact-form {
+            padding: 30px;
+        }
+        
+        .contact-form h3 {
+            color: #800000;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #fff;
+            font-family: inherit;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #800000;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #800000;
+            color: #FFFFE4;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #600000;
+        }
+        
         /* Footer */
         footer {
             background-color: #800000;
@@ -285,9 +389,9 @@
         }
         
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+        @media (max-width: 900px) {
+            .nav-links li {
+                margin-left: 15px;
             }
             
             .about-content {
@@ -298,8 +402,18 @@
                 font-size: 36px;
             }
             
+            .hero-content p {
+                font-size: 18px;
+            }
+            
             .section-title {
                 font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .nav-links {
+                display: none;
             }
         }
     </style>
@@ -310,7 +424,7 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#home" class="logo">SQ</a>
+                <a href="#home" class="logo">YourName</a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -326,8 +440,8 @@
         <div class="container">
             <div class="hero-content">
                 <h1>
-                    Hey, I'm Michael Qiu. Here you can check out the things I'm working on.
-                    Trying to solve issues one at a time.
+                    Hey, I'm <span>Michael Qiu.</span> Here, you can check out what I'm working on.
+                    Trying my best to solve one issue at a time.
                 </h1>
             </div>
         </div>
@@ -416,11 +530,11 @@
             
             <div class="contact-content">
                 <p>
-                    I'm always open to a nice chat, regardless of the topic, feel free to reach out.
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
                 </p>
                 
                 <div class="contact-links">
-                    <a href="mailto:your.michaelsuiyangqiu@gmail.com" class="contact-link">
+                    <a href="mailto:michaelsuiyangqiu@gmail.com" class="contact-link" id="email-link">
                         <i class="fa-solid fa-envelope contact-icon"></i>
                         <span>Email</span>
                     </a>
@@ -440,8 +554,6 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Suiyang Qiu. All rights reserved.</p>
+            <p>&copy; 2025 YourName. All rights reserved.</p>
         </div>
     </footer>
-</body>
-</html>
