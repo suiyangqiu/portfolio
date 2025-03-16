@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background square with border radius -->
+  <rect width="92" height="92" x="4" y="4" fill="#FFFFE4" stroke="#800000" stroke-width="8" rx="12" ry="12"/>
+  <!-- SQ text -->
+  <text x="50" y="65" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#800000">SQ</text>
+</svg>
